@@ -117,7 +117,7 @@ namespace PresentationLayer
 
                 if ("DA" == choice) return true;
                 else if ("NE" == choice) return false;
-                else Console.WriteLine("Nedopušten unos.");
+                Console.WriteLine("Nedopušten unos.");
             }
         }
 
@@ -128,7 +128,7 @@ namespace PresentationLayer
                 Menus.MessageWhenComputerIsNotBuilt();
                 return false;
             }
-            else return true;
+            return true;
         }
 
         static public bool CheckIfAnyComponentsAreChosen(BuiltComputer builtComputer)
@@ -148,13 +148,10 @@ namespace PresentationLayer
                 PopUps.UserGaveUpOnBuiltPC();
                 return true;
             }
-            else
-            {
-                Console.Clear();
-                Console.WriteLine("Povratak na izbor komponenti");
-                PopUps.ReturnToMenu();
-                return false;
-            }
+            Console.Clear();
+            Console.WriteLine("Povratak na izbor komponenti");
+            PopUps.ReturnToMenu();
+            return false;
         }
     }
 }

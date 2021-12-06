@@ -57,7 +57,7 @@ namespace PresentationLayer.Discounts
                 var valueToReturn = UserHasADiscountCode();
                 return valueToReturn;
             }
-            else return 0;
+            return 0;
         }
     }
 }

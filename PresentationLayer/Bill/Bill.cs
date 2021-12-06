@@ -90,14 +90,11 @@ namespace PresentationLayer.Bill
             {
                 return CalculationsForBill.PaymentProcess(User, totalPriceOverall);
             }
-            else
-            {
-                Console.Clear();
-                User.currentlyBuiltComputers = new();
-                Console.WriteLine("Odustali ste od kupnje.\n\nPovratak na glavni izvornik.");
-                PopUps.ReturnToMenu();
-                return new BuiltComputer();
-            }
+            Console.Clear();
+            User.currentlyBuiltComputers = new();
+            Console.WriteLine("Odustali ste od kupnje.\n\nPovratak na glavni izvornik.");
+            PopUps.ReturnToMenu();
+            return new BuiltComputer();
         }
     }
 }

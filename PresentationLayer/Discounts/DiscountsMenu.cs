@@ -13,15 +13,16 @@ namespace PresentationLayer.Discounts
         static public double DiscountMenu(Buyer User, double totalPriceOverall)
         {
             var exitMenu = false;
+            Console.Clear();
             while (true != exitMenu)
             {
-                Console.Clear();
                 var choice = (DiscountMenuChoice)DiscountMenuOutput();
 
                 switch (choice)
                 {
                     case DiscountMenuChoice.Loyalty:
                         totalPriceOverall = LoyaltyDiscountCheck(User, totalPriceOverall);
+                        Console.Clear();
                         break;
                     case DiscountMenuChoice.Quantity:
                         Console.Clear();
@@ -29,9 +30,11 @@ namespace PresentationLayer.Discounts
                             "plaćanjem, dobiti ćete ponudu za odabir besplatnih komponenti.\n");
                         User.BuyerWillChooseBonusComponents = true;
                         PopUps.ReturnToDiscountMenu();
+                        Console.Clear();
                         break;
                     case DiscountMenuChoice.Code:
                         totalPriceOverall = CodeDiscountCheck(totalPriceOverall, User);
+                        Console.Clear();
                         break;
                     case DiscountMenuChoice.Continue:
                         Console.WriteLine("Nastavljate s plaćanjem računa.");

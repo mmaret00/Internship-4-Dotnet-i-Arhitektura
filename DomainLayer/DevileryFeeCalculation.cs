@@ -15,7 +15,7 @@ namespace DomainLayer
             {
                 return CalculateShippingFee(User.Distance, totalWeight);
             }
-            else return 0;
+            return 0;
         }
 
         static double CalculateShippingFee(int distance, double weight)
@@ -28,10 +28,8 @@ namespace DomainLayer
             {
                 return (3 * ((double)distance / 5));
             }
-            else
-            {
-                return (50 + (10 * ((double)distance / 20)));
-            }
+            return (50 + (10 * ((double)distance / 20)));
+            
         }
     }
 }

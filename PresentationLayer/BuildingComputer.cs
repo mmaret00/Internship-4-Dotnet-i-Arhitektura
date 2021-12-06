@@ -176,11 +176,8 @@ namespace PresentationLayer
                 User.currentlyBuiltComputers.Add(builtComputer);
                 return Bill.Bill.PrintBill(builtComputer, User);
             }
-            else
-            {
-                PopUps.UserGaveUpOnBuiltPC();
-                return new BuiltComputer();
-            }
+            PopUps.UserGaveUpOnBuiltPC();
+            return new BuiltComputer();
         }
     }
 }
