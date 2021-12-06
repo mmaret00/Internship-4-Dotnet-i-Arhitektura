@@ -26,7 +26,7 @@ namespace PresentationLayer.Discounts
                     case DiscountMenuChoice.Quantity:
                         Console.Clear();
                         Console.WriteLine("Aktivirali ste popust na količinu. Kad nastavite s " +
-                            "plaćanjem ćete dobiti ponudu za odabir besplatnih komponenti.\n");
+                            "plaćanjem, dobiti ćete ponudu za odabir besplatnih komponenti.\n");
                         User.BuyerWillChooseBonusComponents = true;
                         PopUps.ReturnToDiscountMenu();
                         break;

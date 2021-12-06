@@ -61,7 +61,7 @@ namespace PresentationLayer
             var i = 0;
             foreach (var processor in DataLayer.DataSeed.listOfAvailableProcessors)
             {
-                Console.WriteLine($"{++i}. Marka: {processor.Brand}\tBroj jezgri: {processor.NumberOfCores}\tCijena: {processor.Price} kn");
+                Console.WriteLine($"{++i}. Marka: {processor.Brand}\t\tBroj jezgri: {processor.NumberOfCores}\t\tCijena: {processor.Price} kn");
             }
             Console.WriteLine("\nZa povratak na izbor komponenti unesi 0 ili prazan unos.\n" +
                 "Unesi broj procesora kojeg želiš:");
@@ -106,7 +106,7 @@ namespace PresentationLayer
             int i = 0;
             foreach (var Case in DataLayer.DataSeed.listOfAvailableComputerCases)
             {
-                Console.WriteLine($"{++i}. Materijal: {Case.Material}\tTežina: {Case.Weight} kg\tCijena: {Case.Price} kn");
+                Console.WriteLine($"{++i}. Materijal: {Case.Material}\t\tTežina: {Case.Weight} kg\t\tCijena: {Case.Price} kn");
             }
             Console.WriteLine("\nZa povratak na izbor komponenti unesi 0 ili prazan unos." +
                 "\nUnesi broj kućišta kojeg želiš:");
