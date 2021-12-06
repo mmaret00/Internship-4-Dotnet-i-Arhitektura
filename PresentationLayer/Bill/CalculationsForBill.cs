@@ -52,7 +52,7 @@ namespace PresentationLayer.Bill
                 User.AmountOfMoneySpent = 0;
                 User.LoyalCustomerDiscount = false;
             }
-
+            User.ClaimedCodeDiscount = false;
             User.currentlyBuiltComputers = new();
             Console.WriteLine("Kupnja uspješno obavljena.");
             PopUps.ReturnToMenu();

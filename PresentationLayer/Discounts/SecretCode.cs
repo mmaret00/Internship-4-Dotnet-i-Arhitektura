@@ -24,6 +24,7 @@ namespace PresentationLayer.Discounts
                 {
                     Console.WriteLine("Uspješno ste unijeli validan kod. " +
                         $"Odobren vam je popust od {code.DiscountPercentage}%.");
+                    DomainLayer.SetDiscountCodes.listOfSecretCodes.Remove(code);
                     return (double)code.DiscountPercentage / 100;
                 }
             }

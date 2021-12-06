@@ -14,7 +14,6 @@ namespace PresentationLayer
     {
         static public void MessageWhenComputerIsNotBuilt()
         {
-
             Console.Clear();
             Console.WriteLine("Niste složili računalo! Povratak na slaganje.");
             PopUps.ReturnToMenu();
@@ -33,7 +32,7 @@ namespace PresentationLayer
         }
 
         static public BuiltComputer SendListWithBuiltComputers(Buyer User, BuiltComputer builtComputer)
-        {//ovo u neki drugi class
+        {
             Console.Clear();
             builtComputer = BuildingComputer.BuildAComputer(User, builtComputer);
             return builtComputer;
