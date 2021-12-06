@@ -15,12 +15,11 @@ namespace PresentationLayer
             Console.Clear();
         }
 
-        static public void ReturnToBuilding()//ovo bi moga iskombinirat sa ostalima u popupu
+        static public void ReturnToBuilding()
         {
-            Console.WriteLine("\nOdabrane komponente su spremljene.\n" +
-                "Kliknite bilo koju tipku za povratak na izbor komponenti.");
-            Console.ReadKey();
-            Console.Clear();
+            Console.WriteLine("\nOdabrane komponente su spremljene.");
+            ReturnToBuildingWithoutChoosing();
+
         }
 
         static public void ReturnToBuildingWithoutChoosing()

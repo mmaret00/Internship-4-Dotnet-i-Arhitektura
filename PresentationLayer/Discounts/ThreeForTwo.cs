@@ -33,17 +33,13 @@ namespace PresentationLayer.Discounts
         {
             foreach (var processor in boughtProcessors)
             {
-                if (processor.Value / 2 > 0)
-                {
-                    Console.WriteLine($"Kupili ste {processor.Value} procesora {processor.Key.Brand} " +
-                        $"s {processor.Key.NumberOfCores} jezgri, " +
-                        $"pa imate mogućnost dobiti {processor.Value / 2} istih procesora besplatno. " +
-                        $"Želite li iskoristiti tu ponudu?");
-                    if (ChecksAndVerifications.ConfimationCheck())
-                    {
-                        bonus.bonusProcessors.Add(processor.Key);
-                    }
-                }
+                if (processor.Value / 2 <= 0) continue;
+                Console.WriteLine($"Kupili ste {processor.Value} procesora {processor.Key.Brand} " +
+                    $"s {processor.Key.NumberOfCores} jezgri, " +
+                    $"pa imate mogućnost dobiti {processor.Value / 2} istih procesora besplatno. " +
+                    $"Želite li iskoristiti tu ponudu?");
+                if (!ChecksAndVerifications.ConfimationCheck()) continue;
+                bonus.bonusProcessors.Add(processor.Key);
             }
         }
 
@@ -55,7 +51,6 @@ namespace PresentationLayer.Discounts
             {
                 for (int j = 0; j < User.currentlyBuiltComputers[i]._RAM.Count; j++)
                 {
-
                     if (boughtRAM.ContainsKey(User.currentlyBuiltComputers[i]._RAM[j]))
                     {
                         boughtRAM[User.currentlyBuiltComputers[i]._RAM[j]]++;
@@ -73,16 +68,13 @@ namespace PresentationLayer.Discounts
         {
             foreach (var card in boughtRAM)
             {
-                if (card.Value / 2 > 0)//continue umisto ugnjezdivanja i to
-                {
-                    Console.WriteLine($"Kupili ste {card.Value} RAM kartica od {card.Key.Capacity} TB, " +
-                        $"pa imate mogućnost dobiti {card.Value / 2} istih RAM kartica besplatno. " +
-                        $"Želite li iskoristiti tu ponudu?");
-                    if (ChecksAndVerifications.ConfimationCheck())
-                    {
-                        bonus.bonusRAM.Add(card.Key);
-                    }
-                }
+                if (card.Value / 2 <= 0) continue;
+
+                Console.WriteLine($"Kupili ste {card.Value} RAM kartica od {card.Key.Capacity} TB, " +
+                    $"pa imate mogućnost dobiti {card.Value / 2} istih RAM kartica besplatno. " +
+                    $"Želite li iskoristiti tu ponudu?");
+                if (!ChecksAndVerifications.ConfimationCheck()) continue;
+                bonus.bonusRAM.Add(card.Key);
             }
         }
 
@@ -108,17 +100,15 @@ namespace PresentationLayer.Discounts
         {
             foreach (var disk in boughtHardDisks)
             {
-                if (disk.Value / 2 > 0)
-                {
-                    Console.WriteLine($"Kupili ste {disk.Value} hard diskova {disk.Key.Type} " +
-                        $"s {disk.Key.Capacity}, " +
-                        $"pa imate mogućnost dobiti {disk.Value / 2} istih hard diskova besplatno. " +
-                        $"Želite li iskoristiti tu ponudu?");
-                    if (ChecksAndVerifications.ConfimationCheck())
-                    {
-                        bonus.bonusHardDisk.Add(disk.Key);
-                    }
-                }
+                if (disk.Value / 2 <= 0) continue;
+                
+                Console.WriteLine($"Kupili ste {disk.Value} hard diskova {disk.Key.Type} " +
+                    $"s {disk.Key.Capacity}, " +
+                    $"pa imate mogućnost dobiti {disk.Value / 2} istih hard diskova besplatno. " +
+                    $"Želite li iskoristiti tu ponudu?");
+                if (!ChecksAndVerifications.ConfimationCheck()) continue;
+                bonus.bonusHardDisk.Add(disk.Key);
+                
             }
         }
 
@@ -144,16 +134,12 @@ namespace PresentationLayer.Discounts
         {
             foreach (var Case in boughtComputerCases)
             {
-                if (Case.Value / 2 > 0)
-                {
-                    Console.WriteLine($"Kupili ste {Case.Key.Material} kućište {Case.Value} puta, " +
-                        $"pa imate mogućnost dobiti {Case.Value / 2} istih kućišta besplatno. " +
-                        $"Želite li iskoristiti tu ponudu?");
-                    if (ChecksAndVerifications.ConfimationCheck())
-                    {
-                        bonus.bonusComputerCase.Add(Case.Key);
-                    }
-                }
+                if (Case.Value / 2 <= 0) continue;
+                Console.WriteLine($"Kupili ste {Case.Key.Material} kućište {Case.Value} puta, " +
+                    $"pa imate mogućnost dobiti {Case.Value / 2} istih kućišta besplatno. " +
+                    $"Želite li iskoristiti tu ponudu?");
+                if (!ChecksAndVerifications.ConfimationCheck()) continue;
+                    bonus.bonusComputerCase.Add(Case.Key);
             }
         }
 
