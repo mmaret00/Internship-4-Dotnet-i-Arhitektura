@@ -15,8 +15,8 @@ namespace PresentationLayer
         static public void MessageWhenComputerIsNotBuilt()
         {
             Console.Clear();
-            Console.WriteLine("Niste složili računalo! Povratak na slaganje.");
-            PopUps.ReturnToMenu();
+            Console.WriteLine("Niste složili računalo!");
+            PopUps.ReturnToBuildingWithoutChoosing();
         }
         static public char MenuOutput(Buyer User)
         {

@@ -10,7 +10,7 @@ namespace PresentationLayer
     {
         static public void ReturnToMenu()
         {
-            Console.WriteLine("\nKliknite bilo koju tipku za povratak na izbornik.");
+            Console.WriteLine("\nKliknite bilo koju tipku za povratak na glavni izbornik.");
             Console.ReadKey();
             Console.Clear();
         }
@@ -58,17 +58,13 @@ namespace PresentationLayer
         static public void UserGaveUpOnBuiltPC()
         {
             Console.Clear();
-            Console.WriteLine("Odustali ste od računala. Slijedi povratak.\n" +
-                "Kliknite bilo koju tipku za nastavak.");
-            Console.ReadKey();
-            Console.Clear();
+            Console.WriteLine("Odustali ste od računala. Slijedi povratak na glavni izbornik.");
+            ClickAnyKeyToContinue();
         }
         static public void ReturnToLoginMenu()
         {
-            Console.WriteLine("Povratak na početni zaslon." +
-                "\nKliknite bilo koju tipku za nastavak.");
-            Console.ReadKey();
-            Console.Clear();
+            Console.WriteLine("Povratak na početni zaslon.");
+            ClickAnyKeyToContinue();
         }
     }
 }

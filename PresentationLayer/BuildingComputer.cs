@@ -15,8 +15,9 @@ namespace PresentationLayer
     {
         static public BuiltComputer SaveBuiltComputerAndStartBuildingANewOne()
         {
+            Console.Clear();
             Console.WriteLine("\nRačunalo koje ste odabrali je spremljeno, sada slažete novo računalo.");
-            PopUps.ReturnToMenu();
+            PopUps.ReturnToBuildingWithoutChoosing();
             return new BuiltComputer();
         }
 
