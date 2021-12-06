@@ -12,14 +12,14 @@ namespace PresentationLayer.Bill
     {
         static public double ComposeSingleBill(Buyer User, int j)
         {
-            var totalPrice = User.currentlyBuiltComputers[j]._processor.Price + User.currentlyBuiltComputers[j]._hardDisk.Price + User.currentlyBuiltComputers[j]._computerCase.Price;
-            for (int i = 0; i < User.currentlyBuiltComputers[j]._RAM.Count; i++)
+            var totalPrice = User.currentlyBuiltComputers[j].processor.Price + User.currentlyBuiltComputers[j].hardDisk.Price + User.currentlyBuiltComputers[j].computerCase.Price;
+            for (int i = 0; i < User.currentlyBuiltComputers[j].RAM.Count; i++)
             {
-                totalPrice += User.currentlyBuiltComputers[j]._RAM[i].Price;
+                totalPrice += User.currentlyBuiltComputers[j].RAM[i].Price;
             }
-            var assemblingPrice = (3 + User.currentlyBuiltComputers[j]._RAM.Count) * 25;
+            var assemblingPrice = (3 + User.currentlyBuiltComputers[j].RAM.Count) * 25;
             var finalPrice = totalPrice + assemblingPrice;
-            var totalWeight = User.currentlyBuiltComputers[j]._hardDisk.Weight + User.currentlyBuiltComputers[j]._computerCase.Weight;
+            var totalWeight = User.currentlyBuiltComputers[j].hardDisk.Weight + User.currentlyBuiltComputers[j].computerCase.Weight;
 
             Bill.PrintSingleBilll(User, j, assemblingPrice, totalWeight, finalPrice);
 
@@ -31,7 +31,7 @@ namespace PresentationLayer.Bill
             var weight = 0d;
             for (int i = 0; i < User.currentlyBuiltComputers.Count; i++)
             {
-                weight += User.currentlyBuiltComputers[i]._hardDisk.Weight + User.currentlyBuiltComputers[i]._computerCase.Weight;
+                weight += User.currentlyBuiltComputers[i].hardDisk.Weight + User.currentlyBuiltComputers[i].computerCase.Weight;
             }
             return DomainLayer.DevileryFeeCalculation.CalculateDeliveryCost(User, weight);
         }

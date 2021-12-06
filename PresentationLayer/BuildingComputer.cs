@@ -16,7 +16,7 @@ namespace PresentationLayer
         static public BuiltComputer SaveBuiltComputerAndStartBuildingANewOne()
         {
             Console.Clear();
-            Console.WriteLine("\nRačunalo koje ste odabrali je spremljeno, sada slažete novo računalo.");
+            Console.WriteLine("Računalo koje ste odabrali je spremljeno, sada slažete novo računalo.");
             PopUps.ReturnToBuildingWithoutChoosing();
             return new BuiltComputer();
         }
@@ -59,6 +59,7 @@ namespace PresentationLayer
                         Console.Clear();
                         if (ChecksAndVerifications.ConfirmGivingUpOnBuildingAComputer())
                         {
+                            User.currentlyBuiltComputers = new();
                             builtComputer = new BuiltComputer();
                             return builtComputer;
                         }
@@ -86,7 +87,7 @@ namespace PresentationLayer
                 if (choice >= 1 && choice <= DataLayer.DataSeed.listOfAvailableProcessors.Count)
                 {
                     PopUps.ReturnToBuilding();
-                    builtComputer._processor = DataLayer.DataSeed.listOfAvailableProcessors[choice - 1];
+                    builtComputer.processor = DataLayer.DataSeed.listOfAvailableProcessors[choice - 1];
                     return;
                 }
                 PopUps.UserEnteredUnacceptableChoice();
@@ -112,11 +113,11 @@ namespace PresentationLayer
 
                 if(0 == i)
                 {
-                    builtComputer._RAM.Clear();
+                    builtComputer.RAM.Clear();
                 }
                     
                 chosenRAMList.Add(DataLayer.DataSeed.listOfAvailableRAMs[choice - 1]);
-                builtComputer._RAM.Add(chosenRAMList[i]);
+                builtComputer.RAM.Add(chosenRAMList[i]);
                 if (3 == i) break;
             }
             PopUps.ReturnToBuilding();
@@ -137,7 +138,7 @@ namespace PresentationLayer
                 if (choice >= 1 && choice <= DataLayer.DataSeed.listOfAvailableHardDisks.Count)
                 {
                     PopUps.ReturnToBuilding();
-                    builtComputer._hardDisk = DataLayer.DataSeed.listOfAvailableHardDisks[choice - 1];
+                    builtComputer.hardDisk = DataLayer.DataSeed.listOfAvailableHardDisks[choice - 1];
                     return;
                 }
                 PopUps.UserEnteredUnacceptableChoice();
@@ -159,7 +160,7 @@ namespace PresentationLayer
                 if (choice >= 1 && choice <= DataLayer.DataSeed.listOfAvailableComputerCases.Count)
                 {
                     PopUps.ReturnToBuilding();
-                    builtComputer._computerCase = DataLayer.DataSeed.listOfAvailableComputerCases[choice - 1];
+                    builtComputer.computerCase = DataLayer.DataSeed.listOfAvailableComputerCases[choice - 1];
                     return;
                 }
                 PopUps.UserEnteredUnacceptableChoice();

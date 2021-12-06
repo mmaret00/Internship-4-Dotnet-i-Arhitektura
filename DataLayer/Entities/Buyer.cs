@@ -6,26 +6,26 @@ namespace DataLayer
 {
     public class Buyer : ListOfCustomers
     {
-        private string _name;
-        public string Name { get => _name; set => _name = value; }
+        private string name;
+        public string Name { get => name; set => name = value; }
 
-        private string _address;
-        public string Address { get => _address; set => _address = value; }
+        private string address;
+        public string Address { get => address; set => address = value; }
 
-        private int _distance;
-        public int Distance { get => _distance; set => _distance = value; }
+        private int distance;
+        public int Distance { get => distance; set => distance = value; }
 
-        private double _amountOfMoneySpent;
-        public double AmountOfMoneySpent { get => _amountOfMoneySpent; set => _amountOfMoneySpent = value; }
+        private double amountOfMoneySpent;
+        public double AmountOfMoneySpent { get => amountOfMoneySpent; set => amountOfMoneySpent = value; }
 
-        private bool _deliverAtHome;
-        public bool DeliverAtHome { get => _deliverAtHome; set => _deliverAtHome = value; }
+        private bool deliverAtHome;
+        public bool DeliverAtHome { get => deliverAtHome; set => deliverAtHome = value; }
 
-        private bool _loyalCustomerDiscount;
-        public bool LoyalCustomerDiscount { get => _loyalCustomerDiscount; set => _loyalCustomerDiscount = value; }
+        private bool loyalCustomerDiscount;
+        public bool LoyalCustomerDiscount { get => loyalCustomerDiscount; set => loyalCustomerDiscount = value; }
 
-        private bool _buyerChoseToUseLoyalCustomerDiscount;
-        public bool BuyerChoseToUseLoyalCustomerDiscount { get => _buyerChoseToUseLoyalCustomerDiscount; set => _buyerChoseToUseLoyalCustomerDiscount = value; }
+        private bool buyerChoseToUseLoyalCustomerDiscount;
+        public bool BuyerChoseToUseLoyalCustomerDiscount { get => buyerChoseToUseLoyalCustomerDiscount; set => buyerChoseToUseLoyalCustomerDiscount = value; }
 
         public List<BuiltComputer> previouslyBoughtComputers = new();
 

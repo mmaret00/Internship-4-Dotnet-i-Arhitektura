@@ -11,11 +11,10 @@ namespace DataLayer.Entities
         public string Code;
 
         public int DiscountPercentage;
-        public DiscountCode(string _code, int _discountPercentage)
+        public DiscountCode(string code, int discountPercentage)
         {
-            Code = _code;
-            DiscountPercentage = _discountPercentage;
+            Code = code;
+            DiscountPercentage = discountPercentage;
         }
-
     }
 }

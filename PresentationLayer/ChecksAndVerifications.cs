@@ -123,7 +123,7 @@ namespace PresentationLayer
 
         static public bool CheckIfAllComponentsAreChosen(BuiltComputer builtComputer)
         {
-            if (null == builtComputer._processor || null == builtComputer._RAM || null == builtComputer._hardDisk || null == builtComputer._computerCase)
+            if (null == builtComputer.processor || null == builtComputer.RAM || null == builtComputer.hardDisk || null == builtComputer.computerCase)
             {
                 Menus.MessageWhenComputerIsNotBuilt();
                 return false;
@@ -133,7 +133,7 @@ namespace PresentationLayer
 
         static public bool CheckIfAnyComponentsAreChosen(BuiltComputer builtComputer)
         {
-            if (null == builtComputer._processor && 0 == builtComputer._RAM.Count && null == builtComputer._hardDisk && null == builtComputer._computerCase)
+            if (null == builtComputer.processor && 0 == builtComputer.RAM.Count && null == builtComputer.hardDisk && null == builtComputer.computerCase)
             {
                 return false;
             }
@@ -143,7 +143,7 @@ namespace PresentationLayer
         static public bool ConfirmGivingUpOnBuildingAComputer()
         {
             Console.WriteLine("Jeste li sigurni da želite odustati od računala?");
-            if (ChecksAndVerifications.ConfimationCheck())
+            if (ConfimationCheck())
             {
                 PopUps.UserGaveUpOnBuiltPC();
                 return true;

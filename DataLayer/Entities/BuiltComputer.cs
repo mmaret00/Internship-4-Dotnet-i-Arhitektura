@@ -9,19 +9,19 @@ namespace DataLayer.Entities
 {
     public class BuiltComputer
     {
-        public Processor _processor;
-        public List<RAM> _RAM;
-        public HardDisk _hardDisk;
-        public ComputerCase _computerCase;
-        public List<BonusComponents> _bonusComponents;
+        public Processor processor;
+        public List<RAM> RAM;
+        public HardDisk hardDisk;
+        public ComputerCase computerCase;
+        public List<BonusComponents> bonusComponents;
 
         public BuiltComputer()
         {
-            _processor = null;
-            _RAM = new List<RAM>() { };
-            _hardDisk = null;
-            _computerCase = null;
-            _bonusComponents = new();
+            processor = null;
+            RAM = new List<RAM>() { };
+            hardDisk = null;
+            computerCase = null;
+            bonusComponents = new();
         }
     }
 }

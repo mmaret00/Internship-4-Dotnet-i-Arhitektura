@@ -9,8 +9,6 @@ namespace DataLayer.Entities
 {
     public class Processor : Component
     {
-
-        public int _numberOfCores;
         public int NumberOfCores { get; set; }
 
         public ProcessorBrands Brand;

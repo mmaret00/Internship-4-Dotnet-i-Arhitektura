@@ -17,13 +17,13 @@ namespace PresentationLayer.Discounts
 
             for (int i = 0; i < User.currentlyBuiltComputers.Count; i++)
             {
-                if (boughtProcessors.ContainsKey(User.currentlyBuiltComputers[i]._processor))
+                if (boughtProcessors.ContainsKey(User.currentlyBuiltComputers[i].processor))
                 {
-                    boughtProcessors[User.currentlyBuiltComputers[i]._processor]++;
+                    boughtProcessors[User.currentlyBuiltComputers[i].processor]++;
                 }
                 else
                 {
-                    boughtProcessors.Add(User.currentlyBuiltComputers[i]._processor, 1);
+                    boughtProcessors.Add(User.currentlyBuiltComputers[i].processor, 1);
                 }
             }
             ThreeForTwoDiscountProcessorsPrint(boughtProcessors, bonus);
@@ -49,15 +49,15 @@ namespace PresentationLayer.Discounts
 
             for (int i = 0; i < User.currentlyBuiltComputers.Count; i++)
             {
-                for (int j = 0; j < User.currentlyBuiltComputers[i]._RAM.Count; j++)
+                for (int j = 0; j < User.currentlyBuiltComputers[i].RAM.Count; j++)
                 {
-                    if (boughtRAM.ContainsKey(User.currentlyBuiltComputers[i]._RAM[j]))
+                    if (boughtRAM.ContainsKey(User.currentlyBuiltComputers[i].RAM[j]))
                     {
-                        boughtRAM[User.currentlyBuiltComputers[i]._RAM[j]]++;
+                        boughtRAM[User.currentlyBuiltComputers[i].RAM[j]]++;
                     }
                     else
                     {
-                        boughtRAM.Add(User.currentlyBuiltComputers[i]._RAM[j], 1);
+                        boughtRAM.Add(User.currentlyBuiltComputers[i].RAM[j], 1);
                     }
                 }
             }
@@ -84,13 +84,13 @@ namespace PresentationLayer.Discounts
 
             for (int i = 0; i < User.currentlyBuiltComputers.Count; i++)
             {
-                if (boughtHardDisks.ContainsKey(User.currentlyBuiltComputers[i]._hardDisk))
+                if (boughtHardDisks.ContainsKey(User.currentlyBuiltComputers[i].hardDisk))
                 {
-                    boughtHardDisks[User.currentlyBuiltComputers[i]._hardDisk]++;
+                    boughtHardDisks[User.currentlyBuiltComputers[i].hardDisk]++;
                 }
                 else
                 {
-                    boughtHardDisks.Add(User.currentlyBuiltComputers[i]._hardDisk, 1);
+                    boughtHardDisks.Add(User.currentlyBuiltComputers[i].hardDisk, 1);
                 }
             }
             ThreeForTwoDiscountHardDisksPrint(boughtHardDisks, bonus);
@@ -118,13 +118,13 @@ namespace PresentationLayer.Discounts
 
             for (int i = 0; i < User.currentlyBuiltComputers.Count; i++)
             {
-                if (boughtComputerCases.ContainsKey(User.currentlyBuiltComputers[i]._computerCase))
+                if (boughtComputerCases.ContainsKey(User.currentlyBuiltComputers[i].computerCase))
                 {
-                    boughtComputerCases[User.currentlyBuiltComputers[i]._computerCase]++;
+                    boughtComputerCases[User.currentlyBuiltComputers[i].computerCase]++;
                 }
                 else
                 {
-                    boughtComputerCases.Add(User.currentlyBuiltComputers[i]._computerCase, 1);
+                    boughtComputerCases.Add(User.currentlyBuiltComputers[i].computerCase, 1);
                 }
             }
             ThreeForTwoDiscountComputerCasesPrint(boughtComputerCases, bonus);

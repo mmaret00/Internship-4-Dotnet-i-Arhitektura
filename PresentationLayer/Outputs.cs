@@ -13,22 +13,22 @@ namespace PresentationLayer
     {
         static public void ShowComponentsOfBuiltComputer(BuiltComputer builtComputer)
         {
-            if (null != builtComputer._processor)
-                Console.WriteLine($"\nProcesor:\nMarka: {builtComputer._processor.Brand}\tBroj jezgri: {builtComputer._processor.NumberOfCores}");
+            if (null != builtComputer.processor)
+                Console.WriteLine($"\nProcesor:\nMarka: {builtComputer.processor.Brand}\tBroj jezgri: {builtComputer.processor.NumberOfCores}");
 
-            if (0 != builtComputer._RAM.Count)
+            if (0 != builtComputer.RAM.Count)
             {
                 Console.WriteLine("\nRAM kartice:");
-                for (int i = 0; i < builtComputer._RAM.Count; i++)
+                for (int i = 0; i < builtComputer.RAM.Count; i++)
                 {
-                    Console.Write($"{i + 1}. RAM kartica: {builtComputer._RAM[i].Capacity}\n");
+                    Console.Write($"{i + 1}. RAM kartica: {builtComputer.RAM[i].Capacity}\n");
                 }
             }
-            if (null != builtComputer._hardDisk)
-                Console.WriteLine($"\nHard disk:\nVrsta: {builtComputer._hardDisk.Type}\tKapacitet: {builtComputer._hardDisk.Capacity}\tTežina: {builtComputer._hardDisk.Weight} kg\n");
+            if (null != builtComputer.hardDisk)
+                Console.WriteLine($"\nHard disk:\nVrsta: {builtComputer.hardDisk.Type}\tKapacitet: {builtComputer.hardDisk.Capacity}\tTežina: {builtComputer.hardDisk.Weight} kg\n");
 
-            if (null != builtComputer._computerCase)
-                Console.WriteLine($"Kućište:\nMaterijal: {builtComputer._computerCase.Material}\tTežina: {builtComputer._computerCase.Weight} kg\n");
+            if (null != builtComputer.computerCase)
+                Console.WriteLine($"Kućište:\nMaterijal: {builtComputer.computerCase.Material}\tTežina: {builtComputer.computerCase.Weight} kg\n");
         }
 
         static public void ShowPreviouslyRecievedBonusComponents(List<BonusComponents> bonusComponents)
@@ -118,20 +118,20 @@ namespace PresentationLayer
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine("Složili ste računalo sa specifikacijama:");
-                Outputs.ShowComponentsOfBuiltComputer(builtComputer);
+                ShowComponentsOfBuiltComputer(builtComputer);
                 Console.ResetColor();
                 Console.WriteLine("\n========================================================\n");
             }
         }
         public static void PrintAComputer(BuiltComputer builtComputer)
         {
-            Console.WriteLine($"\nProcesor: {builtComputer._processor.Brand}, broj jezgri: {builtComputer._processor.NumberOfCores}\t\t{builtComputer._processor.Price} kn");
-            for (int i = 0; i < builtComputer._RAM.Count; i++)
+            Console.WriteLine($"\nProcesor: {builtComputer.processor.Brand}, broj jezgri: {builtComputer.processor.NumberOfCores}\t\t{builtComputer.processor.Price} kn");
+            for (int i = 0; i < builtComputer.RAM.Count; i++)
             {
-                Console.Write($"{i + 1}. RAM kartica: {builtComputer._RAM[i].Capacity}\t\t\t{builtComputer._RAM[i].Price} kn\n");
+                Console.Write($"{i + 1}. RAM kartica: {builtComputer.RAM[i].Capacity}\t\t\t{builtComputer.RAM[i].Price} kn\n");
             }
-            Console.WriteLine($"Hard disk: {builtComputer._hardDisk.Type}, {builtComputer._hardDisk.Capacity}, {builtComputer._hardDisk.Weight} kg\t\t{builtComputer._hardDisk.Price} kn");
-            Console.WriteLine($"Kućište: {builtComputer._computerCase.Material}, {builtComputer._computerCase.Weight} kg\t\t{builtComputer._computerCase.Price} kn");
+            Console.WriteLine($"Hard disk: {builtComputer.hardDisk.Type}, {builtComputer.hardDisk.Capacity}, {builtComputer.hardDisk.Weight} kg\t\t{builtComputer.hardDisk.Price} kn");
+            Console.WriteLine($"Kućište: {builtComputer.computerCase.Material}, {builtComputer.computerCase.Weight} kg\t\t{builtComputer.computerCase.Price} kn");
         }
     }
 }

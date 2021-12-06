@@ -53,9 +53,9 @@ namespace PresentationLayer
                     Console.WriteLine("\n========================================================\n");
                     Console.WriteLine($"{i + 1}. kupljeno računalo:");
                     Outputs.PrintAComputer(User.previouslyBoughtComputers[i]);
-                    if (0 == User.previouslyBoughtComputers[i]._bonusComponents.Count) continue;
+                    if (0 == User.previouslyBoughtComputers[i].bonusComponents.Count) continue;
                     Console.WriteLine("\nBonus komponente dobivene uz tu narudžbu:");
-                    Outputs.ShowPreviouslyRecievedBonusComponents(User.previouslyBoughtComputers[i]._bonusComponents);
+                    Outputs.ShowPreviouslyRecievedBonusComponents(User.previouslyBoughtComputers[i].bonusComponents);
                 }
             }
             PopUps.ReturnToMenu();
@@ -143,16 +143,16 @@ namespace PresentationLayer
         {
             var chosen = false;
 
-            if (null != builtComputer._processor) chosen = true;
+            if (null != builtComputer.processor) chosen = true;
             chosen = ChangeColorOfComponentOptions("1 - Procesor", chosen);
 
-            if (0 != builtComputer._RAM.Count) chosen = true;
+            if (0 != builtComputer.RAM.Count) chosen = true;
             chosen = ChangeColorOfComponentOptions("2 - RAM", chosen);
 
-            if (null != builtComputer._hardDisk) chosen = true;
+            if (null != builtComputer.hardDisk) chosen = true;
             chosen = ChangeColorOfComponentOptions("3 - Hard disk", chosen);
 
-            if (null != builtComputer._computerCase) chosen = true;
+            if (null != builtComputer.computerCase) chosen = true;
                      ChangeColorOfComponentOptions("4 - Kućište\n", chosen);
         }
 

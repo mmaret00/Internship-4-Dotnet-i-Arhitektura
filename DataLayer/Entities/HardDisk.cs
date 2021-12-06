@@ -9,7 +9,6 @@ namespace DataLayer.Entities
 {
     public class HardDisk : Component
     {
-
         public HardDiskTypes Type;
         public string Capacity;
 

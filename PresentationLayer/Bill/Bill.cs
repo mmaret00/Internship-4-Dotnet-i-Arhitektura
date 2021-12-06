@@ -12,7 +12,6 @@ namespace PresentationLayer.Bill
 {
     class Bill
     {
-
         static public void PrintUsersData(Buyer User)
         {
             Console.Clear();
@@ -20,7 +19,6 @@ namespace PresentationLayer.Bill
                 $"Kupac:\nIme i prezime: {User.Name}\nAdresa: {User.Address}\nUdaljenost: {User.Distance} km" +
                 "\n========================================================\n");
         }
-
 
         static public void PrintSingleBilll(Buyer User, int j, int assemblingPrice, double totalWeight, double finalPrice)
         {
@@ -81,7 +79,7 @@ namespace PresentationLayer.Bill
             }
 
             if(User.BuyerWillChooseBonusComponents)
-                builtComputer._bonusComponents.Add(ThreeForTwo.ThreeForTwoDiscount(User));
+                builtComputer.bonusComponents.Add(ThreeForTwo.ThreeForTwoDiscount(User));
 
             PrintFinalPrice(totalPriceOverall);
 

@@ -11,9 +11,9 @@ namespace DomainLayer
     {
         public static readonly List<DiscountCode> listOfSecretCodes = new()
         {
-            new DiscountCode(_code: "kodtjsifra", _discountPercentage: RandomValues.RandomDiscountPercentage + 1),
-            new DiscountCode(_code: "drugasifra", _discountPercentage: RandomValues.RandomDiscountPercentage + 1),
-            new DiscountCode(_code: "qweqweqweq", _discountPercentage: RandomValues.RandomDiscountPercentage + 1)
+            new DiscountCode(code: "kodtjsifra", discountPercentage: RandomValues.RandomDiscountPercentage + 1),
+            new DiscountCode(code: "drugasifra", discountPercentage: RandomValues.RandomDiscountPercentage + 1),
+            new DiscountCode(code: "qweqweqweq", discountPercentage: RandomValues.RandomDiscountPercentage + 1)
         };
     }
 }
